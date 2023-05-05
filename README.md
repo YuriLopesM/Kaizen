@@ -39,7 +39,15 @@ Com o escopo inicial, buscamos auxiliar pessoas que estão na faculdade, mais pr
 - Zod
 - React-Hook-Form (caso o grupo notar necessidade)
 
-## Características/diferenciais importantes do projeto (este é um tópico adicional para complementar os tópicos Descrição e Estrutura do Projeto, a ideia é escrever um pouco mais de "quantidade" de texto sem ser apenas uma listinha, tentem detalhar pontos chave que vocês acham fundamental ter no sistema de vocês [independente de qual tela eles estarão])
+## ⚓ Características/diferenciais
+
+Nosso projeto **Kaizen** tem alguns diferenciais que o tornam uma escolha única para os alunos que desejam organizar e planejar suas atividades acadêmicas.
+
+Em primeiro lugar, é importante destacar que o projeto foi criado por acadêmicos que entendem bem as necessidades dos estudantes. Sabemos que o planejamento acadêmico pode ser uma tarefa desafiadora e exigente, e foi pensando nisso que desenvolvemos uma aplicação que atende às necessidades específicas dos alunos.
+
+Além disso, pensamos em criar uma interface intuitiva e moderna que torna a utilização da aplicação fácil e agradável. O design aprimorado da aplicação facilita a visualização da grade horária, tarefas e prazos de entrega, ajudando os alunos a se manterem organizados e no controle de suas atividades acadêmicas.
+
+Por fim, um dos pontos mais importantes é que identificamos uma dor comum entre os participantes do projeto: a falta de uma aplicação que atenda às necessidades dos alunos em termos de organização acadêmica. Por isso, desenvolvemos o Kaizen para suprir essa necessidade, tornando mais fácil e agradável o processo de organização e planejamento acadêmico dos alunos.
 
 ## 🤟 Lista de Integrantes da Equipe
 
