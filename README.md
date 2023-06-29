@@ -54,4 +54,5 @@ Por fim, um dos pontos mais importantes é que identificamos uma dor comum entre
 - [Danilo Formanski](https://www.linkedin.com/in/danilo-formanski/)
 - [Lucas de Oliveira Alano](https://www.linkedin.com/in/lucas-de-oliveira-alano-3879001a2/)
 - [Vinícius Albino dos Santos](https://www.linkedin.com/in/vinicius-albino-dos-santos-57b0a724a/)
+- [Vitor Minatto Barp](https://www.instagram.com/minattinhoo/)
 - [Yuri Lopes Machado](https://www.linkedin.com/in/yuri-lopes-machado/)
