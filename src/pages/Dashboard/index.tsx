@@ -1,3 +1,5 @@
+import { useEffect } from "react"
+import { useAuth, useHeaderTitle } from "../../hooks"
 import { Container, QuickStart, NextTests, LatestTests } from "./styles"
 import { SummaryBanner, QuickStartBanner, NextTestBanner, LatestTestBanner } from "../../components"
 
@@ -9,6 +11,13 @@ import { ReactComponent as Clock } from '../../assets/icons/clock.svg'
 import { ReactComponent as Message } from '../../assets/icons/message.svg'
 
 export const Dashboard = () => {
+    const { user } = useAuth()
+    const { handleChangeTitle } = useHeaderTitle()
+
+    useEffect(() => {
+        handleChangeTitle(`Bem vindo, ${user?.name}!`)
+    }, [])
+
     const summaries = [{
         course: 'Frontend',
         date: new Date(),
