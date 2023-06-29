@@ -3,13 +3,22 @@ import 'styled-components';
 declare module 'styled-components' {
 
     interface Colors {
-        dark_blue: string,
-        blue_600: string,
-        blue_400: string,
-        light_blue: string,
+        blue_100: string,
+        blue_100: string,
+        blue_90: string,
+        blue_80: string,
+        blue_70: string,
+        blue_60: string,
+        blue_50: string,
+        blue_40: string,
+        blue_30: string,
+        blue_20: string,
+        blue_10: string,
     
         dark_orange: string,
         orange: string,
+
+        red: string,
     
         gray: string,
         light_gray: string,

@@ -1,7 +1,14 @@
-import { Logo } from "../../components"
-import { BlueVerticalPattern, Container, Form, Hero, OrangePattern, Text } from "./style"
+import { useState } from "react"; 
+import { useAuth } from "../../hooks";
+import { Logo, Button, Input } from "../../components"
+import { BlueVerticalPattern, Container, Form, Hero, OrangePattern, Text } from "./styles"
 
 export function Login() {
+    const [name, setName] = useState('');
+    const [password, setPassword] = useState('');
+    
+    const { handleLogin } = useAuth();
+
     return (
         <Container>
             <OrangePattern />
@@ -15,18 +22,30 @@ export function Login() {
                 <Form>
                     <h2>Login</h2>
                     <section>
-                        <div>
-                            <label htmlFor="user">Nome de usuário</label>
-                            <input type="text" id="user" />
-                        </div>
-                        <div>
-                            <label htmlFor="password">Senha</label>
-                            <input type="password" id="password" />
-                        </div>
+                        <Input 
+                            id="user"
+                            type="text"
+                            hasLabel={true}
+                            labelText="Nome de usuário"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                        />
+                        <Input 
+                            id="password"
+                            type="password"
+                            hasLabel={true}
+                            labelText="Senha"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
                     </section>
-                    <button>
+                    <Button
+                        styleType="primary"
+                        size="medium"
+                        onClick={() => handleLogin({ name, password })}
+                    >
                         Entrar
-                    </button>
+                    </Button>
                 </Form>
             </Hero>
         </Container>

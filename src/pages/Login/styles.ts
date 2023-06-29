@@ -45,7 +45,7 @@ export const Text = styled.section`
         font-weight: 500;
         line-height: 1.5rem;
         width: 85%;
-        color: ${props => props.theme.colors.blue_400};
+        color: ${props => props.theme.colors.blue_80};
     }
 `;
 
@@ -56,59 +56,16 @@ export const Form = styled.form`
     max-width: 800px;
     padding: 3.5rem 3rem 3rem;
 
-    height: 70%;
+    height: clamp(500px, 500px, 700px);
     width: 430px;
 
-    background: ${props => props.theme.colors.blue_600};
+    background: ${props => props.theme.colors.blue_90};
     border-radius: 0.5rem;
 
     section {
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
-
-        div {
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-
-            label {
-                font-size: 1rem;
-            }
-
-            input {
-                width: 100%;
-                height: 3rem;
-                padding: 0 1rem;
-
-                border-radius: 0.5rem;
-                border: none;
-                background: ${props => props.theme.colors.blue_400};
-                color: ${props => props.theme.colors.black};
-
-                font-size: 1rem;
-                font-weight: 500;
-                line-height: 1.25rem;
-                transition: border-color 0.2s;
-
-            }
-        }
-    }
-
-    button {
-        width: 100%;
-        height: 3rem;
-        border-radius: 0.5rem;
-        border: none;
-        background: ${props => props.theme.colors.orange};
-        color: ${props => props.theme.colors.white};
-        font-weight: 500;
-
-        transition: filter 0.2s;
-
-        &:hover {
-            filter: brightness(1.2);
-        }
     }
 `;
 

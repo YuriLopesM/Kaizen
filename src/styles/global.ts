@@ -17,7 +17,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
-      background: ${props => props.theme.colors.dark_blue};
+      background: ${props => props.theme.colors.blue_100};
       color: ${props => props.theme.colors.white};
     }
 
@@ -35,7 +35,7 @@ export const GlobalStyle = createGlobalStyle`
     h4,
     h5,
     h6 {
-        font-family: Outfit, sans-serif
+        font-family: Sora, sans-serif
     }
 
     a {
@@ -56,11 +56,11 @@ export const GlobalStyle = createGlobalStyle`
         width: 0.5rem;
     }
     ::-webkit-scrollbar-track {
-        background: ${props => props.theme.colors.blue_600};
+        background: ${props => props.theme.colors.blue_90};
     }
     
     ::-webkit-scrollbar-thumb {
-        background: ${props => props.theme.colors.blue_400};
+        background: ${props => props.theme.colors.blue_60};
         border-radius: 0.5rem;
     }
 `
