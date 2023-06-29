@@ -43,4 +43,3 @@ export const Container = styled.button<ButtonStyleProps>`
         cursor: not-allowed;
         
     }
-`

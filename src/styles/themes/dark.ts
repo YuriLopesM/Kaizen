@@ -23,5 +23,4 @@ const dark = {
     black: "#121212",
   },
 };
-
 export default dark;

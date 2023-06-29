@@ -64,5 +64,4 @@ export const GlobalStyle = createGlobalStyle`
         border-radius: 0.5rem;
     }
 `
-
 export default GlobalStyle;

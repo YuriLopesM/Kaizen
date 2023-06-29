@@ -31,7 +31,7 @@ export const Description = styled.section<CardProps>`
     display: flex;
     flex-direction: column;
     justify-content: ${({ $isHighlighted }) => $isHighlighted ? 'space-between' : 'center'};
-;
+
 
     h1 {
         color: ${({ $isHighlighted, theme }) => $isHighlighted ? theme.colors.orange : theme.colors.blue_70};

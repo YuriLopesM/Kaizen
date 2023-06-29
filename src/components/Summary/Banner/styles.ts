@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.section`
     grid-area: summary;
+
     padding: 1.5rem 1.5rem 1.5rem 0;
 
     display: grid;
@@ -11,7 +12,6 @@ export const Container = styled.section`
     grid-template-areas:
         'main other';
     border-bottom: 1px solid ${({ theme }) => theme.colors.blue_90};
-    
 `
 
 export const MainBanner = styled.main`
