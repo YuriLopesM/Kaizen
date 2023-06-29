@@ -10,7 +10,7 @@ export const Container = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-right: 2px solid ${props => props.theme.colors.blue_70};
+    border-right: 2px solid ${props => props.theme.colors.blue_90};
 
     button {
         width: 1.275rem;

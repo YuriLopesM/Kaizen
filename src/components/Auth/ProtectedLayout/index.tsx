@@ -1,5 +1,5 @@
 import { Navigate, Outlet } from "react-router-dom";
-import { useAuth } from "../../../hooks";
+import { useAuth, useHeaderTitle } from "../../../hooks";
 import { Header, Layout, Menu } from "../..";
 
 import { ReactComponent as Home } from '../../../assets/icons/home.svg'
@@ -9,6 +9,7 @@ import { ReactComponent as Settings } from '../../../assets/icons/settings.svg'
 
 export const ProtectedLayout = () => {
   const { isAuthenticated } = useAuth();
+  const { title } = useHeaderTitle();
 
   if (!isAuthenticated) {
     return <Navigate to="/login" />;
@@ -16,7 +17,7 @@ export const ProtectedLayout = () => {
 
   return (
     <Layout
-      headerComponent={<Header title="Dashboard" />}
+      headerComponent={<Header title={title} />}
       menuComponent={
         <Menu
           routes={[{

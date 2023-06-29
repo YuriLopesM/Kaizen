@@ -1,10 +1,13 @@
 import { Outlet } from "react-router-dom";
 import { AuthProvider } from "../../../contexts/AuthContext";
+import { HeaderTitleProvider } from "../../../contexts/HeaderTitleContext";
 
 export const AuthLayout = () => {
   return (
     <AuthProvider>
-      <Outlet />  
+      <HeaderTitleProvider>
+        <Outlet />  
+      </HeaderTitleProvider>
     </AuthProvider>
   );
 };

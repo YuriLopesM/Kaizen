@@ -35,7 +35,7 @@ export const GlobalStyle = createGlobalStyle`
     h4,
     h5,
     h6 {
-        font-family: Outfit, sans-serif
+        font-family: Sora, sans-serif
     }
 
     a {
