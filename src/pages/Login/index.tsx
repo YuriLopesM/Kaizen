@@ -1,9 +1,13 @@
-import { useNavigate } from "react-router-dom"
+import { useState } from "react"; 
+import { useAuth } from "../../hooks";
 import { Logo, Button, Input } from "../../components"
 import { BlueVerticalPattern, Container, Form, Hero, OrangePattern, Text } from "./styles"
 
 export function Login() {
-    const navigate = useNavigate();
+    const [name, setName] = useState('');
+    const [password, setPassword] = useState('');
+    
+    const { handleLogin } = useAuth();
 
     return (
         <Container>
@@ -23,18 +27,22 @@ export function Login() {
                             type="text"
                             hasLabel={true}
                             labelText="Nome de usuário"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
                         />
                         <Input 
                             id="password"
                             type="password"
                             hasLabel={true}
                             labelText="Senha"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
                         />
                     </section>
                     <Button
                         styleType="primary"
                         size="medium"
-                        onClick={() => navigate('/dashboard')}
+                        onClick={() => handleLogin({ name, password })}
                     >
                         Entrar
                     </Button>

@@ -15,6 +15,8 @@ const dark = {
     dark_orange: "#DA472F",
     orange: "#E26D5A",
 
+    red: "#E03737",
+
     gray: "#BEBEBE",
     light_gray: "#EDEDED",
     white: "#F2F2F2",

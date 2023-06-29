@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 interface ButtonStyleProps {
-    styleType: 'primary' | 'secondary' | 'default';
-    size: 'small' | 'medium' | 'large';
+    $styleType: 'primary' | 'secondary' | 'default';
+    $size: 'small' | 'medium' | 'large';
 }
 
 export const Container = styled.button<ButtonStyleProps>`
-    padding: ${({ size }) => {
-        switch (size) {
+    padding: ${({ $size }) => {
+        switch ($size) {
             case 'small':
                 return '0.5rem 0';
             case 'large':
@@ -18,8 +18,8 @@ export const Container = styled.button<ButtonStyleProps>`
     }};
     border-radius: 0.5rem;
     border: none;
-    background: ${({ styleType, theme }) => {
-        switch (styleType) {
+    background: ${({ $styleType, theme }) => {
+        switch ($styleType) {
             case 'primary':
                 return theme.colors.orange;
             case 'secondary':
