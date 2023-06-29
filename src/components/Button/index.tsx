@@ -15,8 +15,8 @@ export const Button = ({
 }: ButtonProps) => {
     return (
         <Container
-            styleType={styleType}
-            size={size}
+            $styleType={styleType}
+            $size={size}
             {...rest}
         >
             {children}

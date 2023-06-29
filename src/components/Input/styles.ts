@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 interface InputStyleProps {
-    styleSize: 'small' | 'medium' | 'large';
+    $styleSize: 'small' | 'medium' | 'large';
 }
 
 export const Container = styled.div`
@@ -15,8 +15,8 @@ export const Container = styled.div`
 `
 
 export const InputComponent = styled.input<InputStyleProps>`
-    padding: ${({ styleSize }) => {
-        switch (styleSize) {
+    padding: ${({ $styleSize }) => {
+        switch ($styleSize) {
             case 'small':
                 return '0.5rem';
             case 'large':

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
     height: 100vh;
     display: grid;
-    grid-template-columns: 40px 1fr;
+    grid-template-columns: 56px 1fr;
     grid-template-rows: 100px 1fr;
     grid-template-areas:
         'menu header'

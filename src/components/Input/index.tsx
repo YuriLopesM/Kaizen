@@ -17,7 +17,7 @@ export const Input = ({
         <Container>
             {hasLabel && <label htmlFor={rest.id}>{labelText}</label>}
             <InputComponent
-                styleSize={styleSize}
+                $styleSize={styleSize}
                 {...rest}
             />
         </Container>
