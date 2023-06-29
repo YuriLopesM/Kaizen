@@ -8,6 +8,7 @@ import {
 
 import { Dashboard, Login } from "../pages";
 import { AuthLayout, OpenLayout, ProtectedLayout } from "../components/Auth";
+import { Profile } from "../pages/Profile";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -23,6 +24,10 @@ const router = createBrowserRouter(
                 <Route
                     path="/dashboard"
                     element={<Dashboard />}
+                />
+                <Route
+                    path="/profile"
+                    element={<Profile />}
                 />
             </Route>
 

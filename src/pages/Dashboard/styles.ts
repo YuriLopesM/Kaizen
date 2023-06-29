@@ -6,22 +6,54 @@ export const Container = styled.div`
 
     display: grid;
     grid-template-columns: 65% 1fr;
-    grid-template-rows: 45% 1fr;
+    grid-template-rows: 35% 1fr;
     grid-template-areas:
-        'summary tests'
-        'quickstart tests';
+        'summary nexttests'
+        'quickstart latesttests';
+    
+    section > h2 {
+        font-weight: 500;
+        font-size: 1.275rem;
+        color: ${({ theme }) => theme.colors.blue_90};
+    }
 `;
-
-export const Summary = styled.section`
-    grid-area: summary;
-`
 
 export const QuickStart = styled.section`
     grid-area: quickstart;
-    background-color: red;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    margin: 2rem 1.5rem 0 0;
 `
 
-export const Tests = styled.section`
-    grid-area: tests;
-    background-color: blue;
+export const NextTests = styled.section`
+    grid-area: nexttests;
+    padding-left: 2rem;
+    margin-left: 1rem;
+    border-left: 1px solid ${({ theme }) => theme.colors.blue_90};
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+`
+
+export const LatestTests = styled.section`
+    grid-area: latesttests;
+    padding-left: 2rem;
+    margin: 1.5rem 0 0 1rem;
+    border-left: 1px solid ${({ theme }) => theme.colors.blue_90};
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+
+    overflow-x: auto;
+    overflow-y: hidden;
 `

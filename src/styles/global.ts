@@ -60,9 +60,8 @@ export const GlobalStyle = createGlobalStyle`
     }
     
     ::-webkit-scrollbar-thumb {
-        background: ${props => props.theme.colors.blue_80};
+        background: ${props => props.theme.colors.blue_60};
         border-radius: 0.5rem;
     }
 `
-
 export default GlobalStyle;

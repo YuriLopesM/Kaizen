@@ -37,4 +37,9 @@ export const Container = styled.button<ButtonStyleProps>`
     &:hover {
         filter: brightness(1.2);
     }
-`
+
+    &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+        
+    }

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-interface InputStyleProps {
+interface SelectStyleProps {
     $styleSize: 'small' | 'medium' | 'large';
 }
 
@@ -14,7 +14,7 @@ export const Container = styled.div`
     }
 `
 
-export const InputComponent = styled.input<InputStyleProps>`
+export const SelectComponent = styled.select<SelectStyleProps>`
     padding: ${({ $styleSize }) => {
         switch ($styleSize) {
             case 'small':

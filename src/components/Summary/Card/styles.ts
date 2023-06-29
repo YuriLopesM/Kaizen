@@ -5,29 +5,39 @@ interface CardProps {
 }
 
 export const Container = styled.div<CardProps>`
+    cursor: pointer;
     width: 100%;
-    height: ${({ $isHighlighted }) => $isHighlighted ? '100%' : '50%'};
+    min-width: ${({ $isHighlighted }) => $isHighlighted ? '400px' : '200px'};
+    height: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 1.5rem;
+    align-items: ${({ $isHighlighted }) => $isHighlighted ? '' : 'center'};
+    padding: ${({ $isHighlighted }) => $isHighlighted ? '1.5rem' : '1rem'};
 
     border-radius: 0.5rem;
 
     background-color: ${({ theme }) => theme.colors.blue_90};
     border:  ${({ $isHighlighted, theme }) => $isHighlighted && `2px solid ${theme.colors.orange}`};
+
+    transition: filter 0.4s ease-in;
+
+    &:hover {
+        filter: brightness(1.2);
+    }
 `;
 
 export const Description = styled.section<CardProps>`
     font-size: 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: ${({ $isHighlighted }) => $isHighlighted ? 'space-between' : 'center'};
+
 
     h1 {
         color: ${({ $isHighlighted, theme }) => $isHighlighted ? theme.colors.orange : theme.colors.blue_70};
-        font-size: ${({ $isHighlighted }) => $isHighlighted ? '1.5rem' : '1rem'};
+        font-size: ${({ $isHighlighted }) => $isHighlighted ? '2rem' : '1rem'};
+        font-weight: 400;
     }
-
 
     p {
         color: ${({ theme }) => theme.colors.blue_70};
@@ -66,7 +76,7 @@ export const Room = styled.section<CardProps>`
 
         strong {
             color: ${({ $isHighlighted, theme }) => $isHighlighted ? theme.colors.orange : theme.colors.blue_70};
-            font-size: ${({ $isHighlighted }) => $isHighlighted ? '3rem' : '1.35rem'};
+            font-size: ${({ $isHighlighted }) => $isHighlighted ? '3rem' : '1.5rem'};
             font-weight: ${({ $isHighlighted }) => $isHighlighted ? '700' : '600'};
             line-height: ${({ $isHighlighted }) => $isHighlighted && '2.8rem'};
         }
