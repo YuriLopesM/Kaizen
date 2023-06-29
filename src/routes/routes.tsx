@@ -6,9 +6,8 @@ import {
     RouterProvider
 } from "react-router-dom";
 
-import { Dashboard, Login } from "../pages";
+import { Dashboard, Login, Profile, Tasks } from "../pages";
 import { AuthLayout, OpenLayout, ProtectedLayout } from "../components/Auth";
-import { Profile } from "../pages/Profile";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -28,6 +27,10 @@ const router = createBrowserRouter(
                 <Route
                     path="/profile"
                     element={<Profile />}
+                />
+                <Route
+                    path="/tasks"
+                    element={<Tasks />}
                 />
             </Route>
 

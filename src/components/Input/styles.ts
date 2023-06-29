@@ -34,4 +34,10 @@ export const InputComponent = styled.input<InputStyleProps>`
     font-weight: 500;
     line-height: 1.25rem;
     transition: border-color 0.2s;
+
+    width: 100%;
+
+    &::placeholder {
+        color: ${props => props.theme.colors.blue_60};
+    }
 `

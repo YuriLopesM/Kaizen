@@ -8,6 +8,8 @@ export const Container = styled.div`
     grid-template-areas:
         'menu header'
         'menu content';
+
+    overflow: hidden;
 `
 
 
@@ -20,4 +22,6 @@ export const Menu = styled.section`
 export const Content = styled.main`
     grid-area: content;
     margin: 1rem 3rem;
+
+    overflow: auto;
 `

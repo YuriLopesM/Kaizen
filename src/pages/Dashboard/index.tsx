@@ -1,7 +1,7 @@
 import { useEffect } from "react"
-import { useAuth, useHeaderTitle } from "../../hooks"
-import { Container, QuickStart, NextTests, LatestTests } from "./styles"
-import { SummaryBanner, QuickStartBanner, NextTestBanner, LatestTestBanner } from "../../components"
+import { useAuth, useHeaderTitle, useTask } from "../../hooks"
+import { Container, QuickStart, NextTests, LatestTests, Tasks } from "./styles"
+import { SummaryBanner, QuickStartBanner, NextTestBanner, LatestTestBanner, TaskWrapper } from "../../components"
 
 import { ReactComponent as Dollar } from '../../assets/icons/dollar.svg'
 import { ReactComponent as Archive } from '../../assets/icons/archive.svg'
@@ -13,6 +13,9 @@ import { ReactComponent as Message } from '../../assets/icons/message.svg'
 export const Dashboard = () => {
     const { user } = useAuth()
     const { handleChangeTitle } = useHeaderTitle()
+    const { tasksSummary } = useTask()
+
+    const taskTitle = tasksSummary.length > 0 ? 'Tarefas e Anotações' : 'Nenhuma tarefa ou anotação'
 
     useEffect(() => {
         handleChangeTitle(`Bem vindo, ${user?.name}!`)
@@ -82,12 +85,12 @@ export const Dashboard = () => {
 
     return (
         <Container>
-            <SummaryBanner 
+            <SummaryBanner
                 summaries={summaries}
             />
             <QuickStart>
                 <h2>Acesso Rápido</h2>
-               <QuickStartBanner pages={pages}/>
+                <QuickStartBanner pages={pages} />
             </QuickStart>
             <NextTests>
                 <h2>Próximas Avaliações</h2>
@@ -97,6 +100,11 @@ export const Dashboard = () => {
                 <h2>Últimas Avaliações</h2>
                 <LatestTestBanner tests={latestTests} />
             </LatestTests>
+            <Tasks>
+                <h2>{taskTitle}</h2>
+                <TaskWrapper tasks={tasksSummary} />
+            </Tasks>
+            
         </Container>
     )
 }

@@ -4,7 +4,7 @@ import { Header, Layout, Menu } from "../..";
 
 import { ReactComponent as Home } from '../../../assets/icons/home.svg'
 import { ReactComponent as User } from '../../../assets/icons/user.svg'
-import { ReactComponent as Settings } from '../../../assets/icons/settings.svg'
+import { ReactComponent as Calendar } from '../../../assets/icons/calendar.svg'
 
 
 export const ProtectedLayout = () => {
@@ -27,8 +27,8 @@ export const ProtectedLayout = () => {
             path: '/profile',
             icon: <User />
           }, {
-            path: '/settings',
-            icon: <Settings />
+            path: '/tasks',
+            icon: <Calendar />
           }]}
         />
       }

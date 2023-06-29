@@ -8,3 +8,4 @@ export * from './Menu';
 export * from './Summary';
 export * from './Quickstart';
 export * from './Test';
+export * from './Task';

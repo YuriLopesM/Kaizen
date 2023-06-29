@@ -337,7 +337,6 @@ export const Profile = () => {
                     size="small"
                     type="button"
                     onClick={() => handleDeleteProfile('id_do_usuario')}
-                    disabled={hasEmptyFields}
                 >
                     Deletar Conta
                 </Button>
