@@ -1,7 +1,10 @@
-import { Logo } from "../../components"
-import { BlueVerticalPattern, Container, Form, Hero, OrangePattern, Text } from "./style"
+import { useNavigate } from "react-router-dom"
+import { Logo, Button, Input } from "../../components"
+import { BlueVerticalPattern, Container, Form, Hero, OrangePattern, Text } from "./styles"
 
 export function Login() {
+    const navigate = useNavigate();
+
     return (
         <Container>
             <OrangePattern />
@@ -15,18 +18,26 @@ export function Login() {
                 <Form>
                     <h2>Login</h2>
                     <section>
-                        <div>
-                            <label htmlFor="user">Nome de usuário</label>
-                            <input type="text" id="user" />
-                        </div>
-                        <div>
-                            <label htmlFor="password">Senha</label>
-                            <input type="password" id="password" />
-                        </div>
+                        <Input 
+                            id="user"
+                            type="text"
+                            hasLabel={true}
+                            labelText="Nome de usuário"
+                        />
+                        <Input 
+                            id="password"
+                            type="password"
+                            hasLabel={true}
+                            labelText="Senha"
+                        />
                     </section>
-                    <button>
+                    <Button
+                        styleType="primary"
+                        size="medium"
+                        onClick={() => navigate('/dashboard')}
+                    >
                         Entrar
-                    </button>
+                    </Button>
                 </Form>
             </Hero>
         </Container>

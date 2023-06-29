@@ -1,5 +1,12 @@
+import { Header, Layout } from "../../components"
+
 export const Dashboard = () => {
     return (
-        <h1>Dashboard</h1>
+        <Layout
+            headerComponent={<Header title="Dashboard" />}
+            menuComponent={<nav style={{ backgroundColor: 'blue', height: '100%' }}>menu</nav>}
+        >
+            Dashboard
+        </Layout>
     )
 }

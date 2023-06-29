@@ -17,7 +17,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
-      background: ${props => props.theme.colors.dark_blue};
+      background: ${props => props.theme.colors.blue_100};
       color: ${props => props.theme.colors.white};
     }
 
@@ -56,11 +56,11 @@ export const GlobalStyle = createGlobalStyle`
         width: 0.5rem;
     }
     ::-webkit-scrollbar-track {
-        background: ${props => props.theme.colors.blue_600};
+        background: ${props => props.theme.colors.blue_90};
     }
     
     ::-webkit-scrollbar-thumb {
-        background: ${props => props.theme.colors.blue_400};
+        background: ${props => props.theme.colors.blue_80};
         border-radius: 0.5rem;
     }
 `
