@@ -10,7 +10,7 @@ export const Container = styled.section`
 export const TitleContainer = styled.div`
     padding: 1rem 0;
     margin: 0 3rem;
-    border-bottom: ${({ theme }) => theme.colors.blue_70} 1px solid;
+    border-bottom: ${({ theme }) => theme.colors.blue_90} 1px solid;
 
     h1 {
         font-size: 2rem;
